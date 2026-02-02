@@ -1,5 +1,9 @@
+from turtle import update
+
 import pytest
 from selene import browser
+from selene.support import webdriver
+from selenium.webdriver.chrome.options import Options
 
 from utils import attach
 
@@ -17,4 +21,5 @@ def browser_setup():
     attach.add_screenshot(browser)
     attach.add_logs(browser)
     attach.add_html(browser)
+    attach.add_video(browser)
     browser.quit()
